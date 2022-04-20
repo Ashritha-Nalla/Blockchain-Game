@@ -1,0 +1,120 @@
+/* Styles go here */
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.container{
+background-color: aqua;
+height: 1400px;
+width: auto;
+display: grid;
+
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 60px 700px 400px 100px;
+row-gap: 10px;
+column-gap: 10px;
+}
+
+.item{
+background-color: peachpuff;
+}
+
+
+.header{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  background-color: pink;
+  color: black;
+
+
+
+}
+.item1{
+  text-align: left;
+  grid-column-start: 1;
+  grid-column-end: 3;
+
+
+}
+
+.item4{
+  grid-column-start: 2;
+  grid-column-end: 4;
+
+}
+.footer{
+  grid-column-start: 1;
+  grid-column-end: 5;
+  background-color: pink;
+  height: 60px;
+  
+}
+
+.login-form{
+  width: 500px;
+  top: 15%;
+  left: 17%;
+  transform: (-30%, -30%);
+  position: absolute;
+  color: rgb(206, 21, 21);
+  background-color: aquamarine;
+  
+}
+.login-form h1{
+  font-size: 40px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 40px 0;
+}
+.login-form p{
+  font-size: 20px;
+  margin: 10px 0;
+
+}
+.login-form label{
+  font-size: 20px;
+  margin: 50px 0;
+
+}
+.login-form select{
+  font-size: 16px;
+  width: 100%;
+  padding: 15px 10px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+}
+
+.login-form input{
+  font-size: 16px;
+  width: 95%;
+  padding: 15px 10px;
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+}
+.login-form button{
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px 0;
+  padding: 10px 15px;
+  width: 50%;
+  border-radius: 5px;
+  border: 0;
+}
+.token {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.bottomdiv{
+  top: 700px;
+  width: 300px;
+  height: 500px;
+  position: absolute;
+  left: 140px;
+}
