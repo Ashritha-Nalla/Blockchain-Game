@@ -3,6 +3,8 @@ import Web3 from 'web3'
 import './App.css';
 import MemoryToken from '../abis/MemoryToken.json'
 import InputOutput from './InputOutput'
+import Footer from './Footer'
+//import img1 from 'src\imagesOfFrontEnd\img1.jpg'
 
 const CARD_ARRAY = [
   {
@@ -153,6 +155,7 @@ class App extends Component {
       player2: '0x0',
       player3: '0x0',
       winner: '0x0',
+      w: 0,
     }
     this.setPlayer1 = this.setPlayer1.bind(this)
     this.setPlayer2 = this.setPlayer2.bind(this)
@@ -237,13 +240,107 @@ class App extends Component {
   render() {
     return (
       <div className="topdiv">
-        <div className="item header">
-            <h1>hi</h1>
+
+        <div className="navbar-container" style={{paddingTop:"0px"}}>
+        <nav className="navbar navbar-expand-lg navbar-light" style={{backgroundColor: "#cc7733"}}>
+        <a className="navbar-brand" style={{fontFamily: "'Raleway', cursive",fontSize:"3rem"}}><span style={{color:"#553311"}}>Lucky Draw</span></a>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul className="navbar-nav ml-auto" style={{textAlign:"center"}}>
+            <li className="nav-item active">
+              <a className="nav-link" href="#AboutGame" ><button type="button" className="nav-button">About</button> <span className="sr-only">(current)</span></a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#bottom-section-contact" ><button type="button" className="nav-button">Contact</button></a>
+            </li>
+          </ul>
+          </div>
+        </nav>
+        </div>
+
+        <div className='marginnew'>
+
+        
+        
+        <div id='AboutGame'> 
+            <div className='AboutGame1'>
+              <h2>
+                Introduction : 
+              </h2><br/>
+              <div className='AboutGame2'>
+              <p>
+                This is a blockchain multiplayer game which runs on Ethereum Blockchain 
+              
+                connected to local blockchain ganache.The players need to pay certain 
+              
+                amount of ethers to enter the lucky draw game. The winner is choosen  
+              
+                randomly who gets to collects tokens by playing memory game. 
+              
+              </p>
+              </div>
+              
+            </div> 
+        </div>
+        <div className='gifnew'></div>
+        
+        <div id='AboutGameRules'>
+            <div className='AboutGameRules'>
+            <h2>
+              Are you ready to play the game of luck?
+            </h2><br/>
+            <h3>The following steps are to be followed :</h3>
+            <h4>1. Choose your account from the ganache local blockchain</h4>
+            <h4>2. Enter the account address in one of the player addresses</h4>
+            <h4>3. Click Pay! button to pay 1 ether to enter the game</h4>
+            <h4>4. Stick back and relax while the blockchain gives out the winner</h4>
+            <h4>5. The winner gets to collect the tokens by playing the memory game below
+            </h4><br/>
+            </div> 
+        </div>
+
+        <div className='gifnew2'></div>
+
+        <div className="item header1">
+            <h2><center>Test Your Luck!</center></h2>
         </div>
         <div className="inout">
-        <InputOutput setPlayer1 = {this.setPlayer1} setPlayer2 = {this.setPlayer2} setPlayer3 = {this.setPlayer3}/>
-        <p>Winner : {this.state.winner}</p>
+          <center>
+        	<InputOutput setPlayer1 = {this.setPlayer1} setPlayer2 = {this.setPlayer2} setPlayer3 = {this.setPlayer3}/>
+          </center>
         </div>
+        <div className="item header2">
+          <div className = 'box'>
+            <h2><center>Winner is the player with address :   </center></h2>
+            <h5><center><i>{this.state.winner}</i></center></h5>
+          </div>
+        </div>
+      
+      
+      
+      <div id='AboutGame4'> 
+            <div className='AboutGame5'>
+              <h2>
+                Collection of tokens : 
+              </h2><br/>
+              <div className='AboutGame6'>
+              <p>
+                The winner is awarded with Non-Fungible Tokens.<br/>
+                These Non-Fungible Tokens are added to the winner's account.<br/>
+                These tokens can be collected by playing the following game.<br/>
+                <br/>
+                The instructions to be followed to collect the tokens are:<br/>
+                1. The grid consists of tokens which are in pairs.<br/> 
+                2. The player can view two tokens at a time by clicking on the grid.<br/>
+                3. The player has to remember the placement of the tokens and match <br/>them to collect.
+              </p>
+            </div>
+              <div className='icon-arrow'></div>
+            </div> 
+      </div>
+ 
       <div className='bottomdiv'>
         <div className="container-fluid mt-5">
           <div className="row">
@@ -292,19 +389,21 @@ class App extends Component {
                 </div>
 
               </div>
-
             </main>
+            
           </div>
         </div>
+        
         </div>
         
+        </div>
+        <div className='lastFooter'>
+              <Footer ></Footer>
+        </div>
       </div>
-      
-
 
       
-    
-    
+      
     );
   }
 }

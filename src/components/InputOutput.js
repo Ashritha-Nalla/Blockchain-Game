@@ -12,6 +12,7 @@ class InputOutput extends Component {
                 this.props.setPlayer1(this.playerAddress1.value)
               }} >
                   <br></br>
+                  <h4>Player 1 address</h4>
                   <input
                     id="player-address1"
                     type="text"
@@ -20,7 +21,7 @@ class InputOutput extends Component {
                     placeholder="Account address of the player1 to be played..."
                     required />
                   
-                  <button type="submit" >Pay!</button>  
+                  <button className= "button1" type="submit" >Pay!</button>  
               </form>
 
               <form onSubmit={(event) => {
@@ -28,6 +29,7 @@ class InputOutput extends Component {
                 this.props.setPlayer2(this.playerAddress2.value)
               }} >
                   <br></br>
+                  <h4>Player 2 address</h4>
                   <input
                     id="player-address2"
                     type="text"
@@ -36,7 +38,7 @@ class InputOutput extends Component {
                     placeholder="Account address of the player2 to be played..."
                     required />
                   
-                  <button type="submit" >Pay!</button>  
+                  <button className= "button1"type="submit" >Pay!</button>  
               </form>
 
               <form onSubmit={(event) => {
@@ -44,6 +46,7 @@ class InputOutput extends Component {
                 this.props.setPlayer3(this.playerAddress3.value)
               }} >
                   <br></br>
+                  <h4>Player 3 address</h4>
                   <input
                     id="player-address3"
                     type="text"
@@ -52,7 +55,7 @@ class InputOutput extends Component {
                     placeholder="Account address of the player3 to be played..."
                     required />
                   
-                  <button type="submit" >Pay!</button>  
+                  <button className= "button1" type="submit" >Pay!</button>  
               </form>
             </div>
 

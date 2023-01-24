@@ -15,6 +15,8 @@ contract MemoryToken is ERC721Full  {
     //uint public count;
     address public p;
     address public winner;
+    uint public w;
+    uint public randWinner;
 
     constructor() ERC721Full("Memory Token", "MEMORY") public {
         admin = msg.sender;
@@ -85,12 +87,11 @@ contract MemoryToken is ERC721Full  {
     function random() internal view returns(uint){
        return uint(keccak256(abi.encodePacked(block.difficulty, block.timestamp, uint(3) )));
     }
-   
+
+
     function pickWinner() public onlyOwner returns(address){
 
-        //require(players.length >= 3 , "Minimum 3 players are required to participate to conduct the Lucky Draw");
-        
-        uint randWinner = random() % 3;
+        randWinner = random() % 3;
         if(randWinner == 0){
             winner = player1;
         }else if(randWinner == 1){
@@ -98,10 +99,9 @@ contract MemoryToken is ERC721Full  {
         }else{
             winner = player3;
         }
-        //winner.transfer(getBalance()); 
-        
-        return winner;
+        return (winner);
     }
+    
 
     function mint(address _to, string memory _tokenURI) public returns(bool) {
        uint _tokenId = totalSupply().add(1);
